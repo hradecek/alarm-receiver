@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <Appenders>
+        <Console name="STDOUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n" />
+        </Console>
+        <File name="LOG_FILE" filename="logs/alarm-receiver.log">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n" />
+        </File>
+        <Async name="Async">
+            <AppenderRef ref="LOG_FILE"/>
+        </Async>
+    </Appenders>
+    <Loggers>
+        <Logger name="com.mchange.v2" level="warn"/>
+        <Logger name="io.netty" level="warn"/>
+        <Logger name="io.vertx" level="info"/>
+<!--        <Logger name="com.hradecek.alarm" level="debug">-->
+<!--            <AppenderRef ref="LOG_FILE"/>-->
+<!--        </Logger>-->
+        <Root level="info">
+            <AppenderRef ref="STDOUT" />
+        </Root>
+    </Loggers>
+</Configuration>
