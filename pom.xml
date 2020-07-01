@@ -14,7 +14,7 @@
         <main.verticle>com.hradecek.alarm.MainVerticle</main.verticle>
         <!-- Libraries -->
         <version.vertx>3.8.3</version.vertx>
-        <version.log4j2>2.12.1</version.log4j2>
+        <version.log4j2>2.13.3</version.log4j2>
         <version.guava>28.1-jre</version.guava>
         <!-- Maven plugins -->
         <version.maven.shade.plugin>3.2.1</version.maven.shade.plugin>
